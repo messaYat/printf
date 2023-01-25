@@ -40,13 +40,15 @@ int _printf(const char *format, ...)
 			count += (pfunc)
 				? pfunc(arguments, &flags)
 				: _printf("%%%c", *p);
-		}
-		else
-	}		count += _putchar(*p);
-	putchar(-1);
+		} else
+			count += _putchar(*p);
+	}
+	_putchar(-1);
 	va_end(arguments);
 	return (count);
+
 }
+
 
 
 
